@@ -1,14 +1,41 @@
 import db_config as db
+from random import randint
 from app import create_app
 from bson.json_util import dumps
 from flask_pymongo import pymongo
-from flask import jsonify, request
+from flask import jsonify, request, render_template, redirect
 
 app = create_app()
 auth = db.AUTH
 
+@app.route("/")
+def index():
+    consoles = list(db.db.before2005.find())
+    colors = [randint(1, 10) for x in range(len(consoles))]
+
+    return render_template('index.html', consolas = consoles, lon = len(consoles), color = colors)
+
+@app.route("/home")
+def home():
+    return render_template("home.html")
+
+# Captura de datos de formulario
+@app.route("/auth", methods = ['POST'])
+def verificar():
+    
+    identify = request.form.get("auth")
+    if identify == auth:
+        return redirect(f"{identify}/panel")
+    else:
+        return "<h1>Auth string incorrecto</h1>"
+
+@app.route(f"/{auth}/panel")
+def panel():
+    return render_template("panel.html")
+
 @app.route("/<string:identity>/api/showConsoles/")
 def showConsoles(identity):
+
     if identity == auth:
         consoles = dumps(list(db.db.before2005.find()))
         return consoles

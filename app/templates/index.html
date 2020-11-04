@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="{{ url_for('static', filename='css/styles.css', v=0.2) }}">
+</head>
+<body>
+    <div class="cab">
+        <h1 class="texa">Retro Consolas</h1>
+    </div>
+    <main>
+        <div class="grid">
+            {% for i in range (lon) %}
+                {% if i % 2 == 0 %}
+                    <div class="grid__item theme-{{ color[i] }}">
+                        <div class="grid__item-content">
+                            <h2 class="grid__item-title">{{ consolas[i].name }}</h2>
+                            <p class="grid__item-text">{{ consolas[i].company }}</p>
+                            <p class="grid__item-text">{{ consolas[i].age }}</p>
+                        </div>
+                    </div>
+                    <div class="grid__item grid__item--bg">
+                        <div class="grid__item-img">
+                            <img src="{{ consolas[i].img }}" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                {% else %}
+                    <div class="grid__item grid__item--bg">
+                        <div class="grid__item-img">
+                            <img src="{{ consolas[i].img }}" alt="Image" style="width: 100%; height: 100%;">
+                        </div>
+                    </div>
+                    <div class="grid__item theme-{{ color[i] }}">
+                        <div class="grid__item-content">
+                            <h2 class="grid__item-title">{{ consolas[i].name }}</h2>
+                            <p class="grid__item-text">{{ consolas[i].company }}</p>
+                            <p class="grid__item-text">{{ consolas[i].age }}</p>
+                        </div>
+                    </div>
+                {% endif %}
+            {% endfor %}
+        </div>
+    </main>
+</body>
+</html>
