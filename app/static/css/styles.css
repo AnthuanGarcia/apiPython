@@ -26,15 +26,6 @@ body {
 	-moz-osx-font-smoothing: grayscale;
 }
 
-/* Icons */
-.icon {
-	display: block;
-	width: 1.5em;
-	height: 1.5em;
-	margin: 0 auto;
-	fill: currentColor;
-}
-
 main {
 	position: relative;
 	margin: 0 auto;
@@ -96,14 +87,6 @@ main {
 	display: block;
 }
 
-.grid__item-img img:nth-child(2) {
-	position: absolute;
-	top: 0;
-	left: 0;
-	opacity: 0;
-	transition: opacity 0.3s;
-}
-
 .js .grid__item-img img {
 	display: none;
 }
@@ -160,10 +143,6 @@ main {
 	color: var(--item-link);
 }
 
-.grid__item-link + .grid__item-link {
-	margin: 0 0 0 3rem;
-}
-
 .grid__item-text + .grid__item-link {
 	white-space: nowrap;
 	margin-top: 1rem;
@@ -178,9 +157,6 @@ main {
 /* Themes */
 .theme-1 {
 	--item-bg: #4bb4e7;
-    --item-link: #fff;
-    --item-link-hover: #0d2936;
-    --item-meta: #fff;
     --item-title: #fff;
     --item-subtitle: #fff;
     --item-text: #fff;
@@ -188,9 +164,6 @@ main {
 
 .theme-2 {
 	--item-bg: rgb(206, 2, 2);
-	--item-link: #fff;
-	--item-link-hover: #fff;
-	--item-meta: #fff;
 	--item-title: #fff;
 	--item-subtitle: #fff;
 	--item-text: #fff;
@@ -198,9 +171,6 @@ main {
 
 .theme-3 {
 	--item-bg: #810092;
-	--item-link: #fff;
-	--item-link-hover: #fff;
-	--item-meta: #fff;
 	--item-title: #fff;
 	--item-subtitle: #fff;
 	--item-text: #fff;
@@ -208,9 +178,6 @@ main {
 
 .theme-4 {
 	--item-bg:  #32d400;
-    --item-link: #fff;
-    --item-link-hover: #9e6817;
-    --item-meta: #fff;
     --item-title: #fff;
     --item-subtitle: #fff;
     --item-text: #fff;
@@ -218,19 +185,13 @@ main {
 
 .theme-5 {
 	--item-bg: #f53302;
-    --item-link: #12161e;
-    --item-link-hover: #0d13c1;
-    --item-meta: #fff;
-    --item-title: #12161e;
+    --item-title: #fff;
     --item-subtitle: #12161e;
-    --item-text: #12161e;
+    --item-text: #fff;
 }
 
 .theme-6 {
 	--item-bg: rgb(0,0,0);
-    --item-link: #12161e;
-    --item-link-hover: #fff;
-    --item-meta: #fff;
     --item-title: #ffffff;
     --item-subtitle: #fff;
     --item-text: #fff;
@@ -238,9 +199,6 @@ main {
 
 .theme-7 {
 	--item-bg:#c10c67;
-    --item-link: #fff;
-    --item-link-hover: #fff;
-    --item-meta: #fff;
     --item-title: #fff;
     --item-subtitle: #fff;
     --item-text: #fff;
@@ -248,9 +206,6 @@ main {
 
 .theme-8 {
 	--item-bg: #0c13c1;
-    --item-link: #dd8ca5;
-    --item-link-hover: #fff;
-    --item-meta: #fff;
     --item-title: #fff;
     --item-subtitle: #fff;
     --item-text: #fff;
@@ -258,9 +213,6 @@ main {
 
 .theme-9 {
 	--item-bg: #8ff5f1;
-    --item-link: #000000;
-    --item-link-hover: #e80c40;
-    --item-meta: #fff;
     --item-title: #000;
     --item-subtitle: #000;
     --item-text: #000;
@@ -268,12 +220,9 @@ main {
 
 .theme-10 {
 	--item-bg: #ffea00;
-    --item-link: #000;
-    --item-link-hover: #fff;
-    --item-meta: #fff;
-    --item-title: #fff;
+    --item-title: #000;
     --item-subtitle: #000;
-    --item-text: #fff;
+    --item-text: #000;
 }
 
 @media screen and (min-width: 85em) {

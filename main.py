@@ -33,36 +33,21 @@ def verificar():
 def panel():
     return render_template("panel.html")
 
-@app.route("/<string:identity>/api/showConsoles/")
-def showConsoles(identity):
+@app.route("/api/showConsoles/")
+def showConsoles():
+    consoles = dumps(list(db.db.before2005.find()))
+    return consoles
 
-    if identity == auth:
-        consoles = dumps(list(db.db.before2005.find()))
-        return consoles
-    else:
+@app.route("/api/console/<string:name>/")
+def showConsole(name):
+    console = dumps(db.db.before2005.find_one({"name" : name}))
+    if console == "null":
         return jsonify({
-            "error" : "Autorizacion invalida, ingresa el string de identidad"
+            "error" : 400,
+            "message" : "Consola no encontrada :("
         })
-
-@app.route("/<string:identity>/api/console/<string:name>/")
-def showConsole(name, identity):
-
-    if identity == auth:
-
-        console = dumps(db.db.before2005.find_one({"name" : name}))
-        if console == "null":
-            return jsonify({
-                "error" : 400,
-                "message" : "Consola no encontrada :("
-            })
-        else:
-            return console
-
     else:
-        return jsonify({
-            "error" : "Autorizacion invalida, ingresa el string de identidad"
-        })
-
+        return console
 
 @app.route("/<string:identity>/api/newConsole/", methods = ["POST"])
 def addConsole(identity):
