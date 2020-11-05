@@ -185,9 +185,9 @@ main {
 
 .theme-5 {
 	--item-bg: #f53302;
-    --item-title: #fff;
-    --item-subtitle: #12161e;
-    --item-text: #fff;
+    --item-title: #000;
+    --item-subtitle: #000;
+    --item-text: #000;
 }
 
 .theme-6 {
