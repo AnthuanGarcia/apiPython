@@ -156,70 +156,70 @@ main {
 
 /* Themes */
 .theme-1 {
-	--item-bg: #4bb4e7;
-    --item-title: #fff;
-    --item-subtitle: #fff;
-    --item-text: #fff;
+	--item-bg: #FFF702;
+    --item-title: #000;
+    --item-subtitle: #000;
+    --item-text: #000;
 }
 
 .theme-2 {
-	--item-bg: rgb(206, 2, 2);
+	--item-bg: #242038;
 	--item-title: #fff;
 	--item-subtitle: #fff;
 	--item-text: #fff;
 }
 
 .theme-3 {
-	--item-bg: #810092;
+	--item-bg: #9067C6;
 	--item-title: #fff;
 	--item-subtitle: #fff;
 	--item-text: #fff;
 }
 
 .theme-4 {
-	--item-bg:  #32d400;
+	--item-bg:  #8D86C9;
     --item-title: #fff;
     --item-subtitle: #fff;
     --item-text: #fff;
 }
 
 .theme-5 {
-	--item-bg: #f53302;
+	--item-bg: #CAC4CE;
     --item-title: #000;
     --item-subtitle: #000;
     --item-text: #000;
 }
 
 .theme-6 {
-	--item-bg: rgb(0,0,0);
-    --item-title: #ffffff;
-    --item-subtitle: #fff;
-    --item-text: #fff;
+	--item-bg: #F9F4F5;
+    --item-title: #000000;
+    --item-subtitle: #000000;
+    --item-text: #000;
 }
 
 .theme-7 {
-	--item-bg:#c10c67;
+	--item-bg:#FF4365;
     --item-title: #fff;
     --item-subtitle: #fff;
     --item-text: #fff;
 }
 
 .theme-8 {
-	--item-bg: #0c13c1;
+	--item-bg: #00D9C0;
     --item-title: #fff;
     --item-subtitle: #fff;
     --item-text: #fff;
 }
 
 .theme-9 {
-	--item-bg: #8ff5f1;
+	--item-bg: #EC9192;
     --item-title: #000;
     --item-subtitle: #000;
     --item-text: #000;
 }
 
 .theme-10 {
-	--item-bg: #ffea00;
+	--item-bg: #CCB7AE;
     --item-title: #000;
     --item-subtitle: #000;
     --item-text: #000;
