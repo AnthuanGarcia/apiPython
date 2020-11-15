@@ -3,9 +3,11 @@ from random import randint
 from app import create_app
 from bson.json_util import dumps
 from flask_pymongo import pymongo
+from flask_cors import CORS
 from flask import jsonify, request, render_template, redirect
 
 app = create_app()
+CORS(app)
 auth = db.AUTH
 
 @app.route("/")
